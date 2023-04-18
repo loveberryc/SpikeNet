@@ -39,6 +39,7 @@ class SNNModelWrapper(ModelWrapper):
 #             self.encoder = GreenEncoder(self.args)
 #             self.encoder.write_codebook()
 #             self.spike_gen = self.encoder.spike_gen
+            self.spike_gen = spikegen.rate #no use
         else:
             self.spike_gen = spikegen.rate
 

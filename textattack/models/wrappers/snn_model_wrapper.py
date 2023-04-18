@@ -7,7 +7,7 @@ PyTorch SNN Model Wrapper
 import torch
 from torch.nn import CrossEntropyLoss
 from args import SNNArgs
-from data_preprocess.green_encoder import GreenEncoder
+#from data_preprocess.green_encoder import GreenEncoder
 
 import utils.attackutils
 from snntorch import spikegen
@@ -36,9 +36,9 @@ class SNNModelWrapper(ModelWrapper):
         self.num_steps = args.num_steps
         self.use_codebook = args.use_codebook
         if self.use_codebook == 'True':
-            self.encoder = GreenEncoder(self.args)
-            self.encoder.write_codebook()
-            self.spike_gen = self.encoder.spike_gen
+#             self.encoder = GreenEncoder(self.args)
+#             self.encoder.write_codebook()
+#             self.spike_gen = self.encoder.spike_gen
         else:
             self.spike_gen = spikegen.rate
 

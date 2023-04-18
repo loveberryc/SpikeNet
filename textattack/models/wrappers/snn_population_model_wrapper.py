@@ -7,7 +7,7 @@ PyTorch SNN Model Wrapper
 import torch
 from torch.nn import CrossEntropyLoss
 from args import SNNArgs
-from data_preprocess.green_encoder import GreenEncoder
+#from data_preprocess.green_encoder import GreenEncoder
 
 import utils.attackutils
 from snntorch import spikegen

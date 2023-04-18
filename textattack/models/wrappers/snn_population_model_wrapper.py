@@ -37,9 +37,10 @@ class SNNPopulationModelWrapper(ModelWrapper):
         self.use_codebook = args.use_codebook
         self.label_num = args.label_num
         if self.use_codebook == 'True':
-            self.encoder = GreenEncoder(self.args)
-            self.encoder.write_codebook()
-            self.spike_gen = self.encoder.spike_gen
+#             self.encoder = GreenEncoder(self.args)
+#             self.encoder.write_codebook()
+#             self.spike_gen = self.encoder.spike_gen
+            self.spike_gen = spikegen.rate #no use
         else:
             self.spike_gen = spikegen.rate
 

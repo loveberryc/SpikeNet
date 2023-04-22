@@ -11,8 +11,8 @@ from dataset import RateDataset
 from data_preprocess.embedding_encoder import EmbeddingEncoder
 from utils.public import set_seed, save_model_to_file, output_message, load_model_from_file
 from args import SNNArgs
-#import pickle
-import pickle5 as pickle
+import pickle
+# import pickle5 as pickle
 from snntorch.utils import reset
 from snntorch.backprop import BPTT
 import snntorch.functional as SF

@@ -12,7 +12,7 @@ class SNN_TextCNN(nn.Module):
     def __init__(self, args, spike_grad=surrogate.fast_sigmoid(slope=25)) -> None:
         super().__init__()
         self.dead_neuron_checker = args.dead_neuron_checker
-        self.initial_method = args.initial_method
+        #self.initial_method = args.initial_method
         self.positive_init_rate = args.positive_init_rate
         self.convs_1 = nn.ModuleList([
             nn.Conv2d(in_channels=1, out_channels=args.filter_num, kernel_size=(filter_size, args.hidden_dim))

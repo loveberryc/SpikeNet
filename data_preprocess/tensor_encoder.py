@@ -100,13 +100,23 @@ class TensorEncoder():
 
 
 if __name__ == "__main__":
-    tensor_encoder = TensorEncoder(
+    tensor_encoder1 = TensorEncoder(
         vocab_path="../data/glove.6B.300d.txt",
-        dataset_name="imdb",
-        data_type="dev",
-        datafile_path="../data/imdb/dev.txt",
-        sent_length=256,
+        dataset_name="sst2",
+        data_type="train",
+        datafile_path="../data/sst2/train.tsv",
+        sent_length=25,
         embedding_dim=300,
         bias = 3
     )
-    tensor_encoder.encode()
+    tensor_encoder2 = TensorEncoder(
+        vocab_path="../data/glove.6B.300d.txt",
+        dataset_name="sst2",
+        data_type="dev",
+        datafile_path="../data/sst2/dev.tsv",
+        sent_length=25,
+        embedding_dim=300,
+        bias = 3
+    )
+    tensor_encoder1.encode()
+    tensor_encoder2.encode()

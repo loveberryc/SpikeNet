@@ -160,16 +160,16 @@ def TBPTT(
     spk_rec_trunc = []
 
     net = net.to(device)
-    data_iterator = iter(dataloader)
+#     data_iterator = iter(dataloader)
 
     zero_index_in_this_epoch = np.arange(301)
     one_index_in_this_epoch = np.arange(301)
-    for data, targets in data_iterator:
-        
+#     for data, targets in data_iterator:
+    for i, (data, targets) in enumerate(dataloader):
         iter_count += 1
         net.train()
-        data = data.to(device)
-        targets = targets.to(device)
+#         data = data.to(device)
+#         targets = targets.to(device)
 
         if time_var:
             if time_first:

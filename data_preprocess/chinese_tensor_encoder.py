@@ -191,14 +191,36 @@ class ChineseTensorEncoder():
                 
         return dataset
 if __name__ == "__main__":
-    tensor_encoder = ChineseTensorEncoder(
-        vocab_path="../word2vec/sgns.merge.bigram",
-        vocab_dict_path="../word2vec/sgns.merge.bigram.pkl",
-        dataset_name="senti",
-        data_type="test",
-        datafile_path="../dataset/txt/chnsenti_test.txt",
+    tensor_encoder1 = ChineseTensorEncoder(
+        vocab_path="../data/sgns.merge.bigram",
+        vocab_dict_path="../data/sgns.merge.bigram",
+        dataset_name="THUCNews",
+        data_type="train",
+        datafile_path="../data/THUCNews/train.txt",
         sent_length=32,
         embedding_dim=300,
         bias = 3
     )
-    tensor_encoder.encode()
+    tensor_encoder3 = ChineseTensorEncoder(
+        vocab_path="../data/sgns.merge.bigram",
+        vocab_dict_path="../data/sgns.merge.bigram",
+        dataset_name="THUCNews",
+        data_type="dev",
+        datafile_path="../data/THUCNews/dev.txt",
+        sent_length=32,
+        embedding_dim=300,
+        bias = 3
+    )
+    tensor_encoder2 = ChineseTensorEncoder(
+        vocab_path="../data/sgns.merge.bigram",
+        vocab_dict_path="../data/sgns.merge.bigram",
+        dataset_name="THUCNews",
+        data_type="test",
+        datafile_path="../data/THUCNews/test.txt",
+        sent_length=32,
+        embedding_dim=300,
+        bias = 3
+    )
+    tensor_encoder1.encode()
+    tensor_encoder2.encode()
+    tensor_encoder3.encode()

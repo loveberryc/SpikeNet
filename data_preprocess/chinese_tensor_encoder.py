@@ -131,7 +131,7 @@ class ChineseTensorEncoder():
     def encode(self):
         word_embedding_dict = {}
         word_embedding_list=[]
-        with open(self.vocab_path, "r",encoding="gbk") as f:
+        with open(self.vocab_path, "r") as f:
             word_count=0
             for line in f:
                 word_count+=1
